@@ -1,0 +1,51 @@
+server_connect_timeout: 5000
+remote_ping_cache: -1
+forge_support: true
+player_limit: %max_players%
+permissions:
+  default:
+  - bungeecord.command.server
+  - bungeecord.command.list
+  admin:
+  - bungeecord.command.alert
+  - bungeecord.command.end
+  - bungeecord.command.ip
+  - bungeecord.command.reload
+  - terium.command.*
+timeout: 30000
+log_commands: false
+network_compression_threshold: 256
+online_mode: true
+disabled_commands:
+- disabledcommandhere
+servers:
+  lobby:
+    motd: '&fA default &bterium-cloud &fservice (Forced Host)'
+    address: 0.0.0.0:%port%
+    restricted: false
+listeners:
+- query_port: 25577
+  motd: '&fA default &bterium-cloud &fbungeecord service'
+  tab_list: GLOBAL_PING
+  query_enabled: false
+  proxy_protocol: false
+  forced_hosts:
+    pvp.md-5.net: pvp
+  ping_passthrough: false
+  priorities:
+  - lobby
+  bind_local_address: true
+  host: 0.0.0.0:%port%
+  max_players: %max_players%
+  tab_size: 60
+  force_default_server: false
+ip_forward: true
+remote_ping_timeout: 5000
+prevent_proxy_connections: false
+groups:
+  Terium:
+  - admin
+connection_throttle: 4000
+stats: c4f06029-b14e-4c94-9f45-f84eab90b260
+connection_throttle_limit: 3
+log_pings: false
